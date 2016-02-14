@@ -2,7 +2,7 @@
 if [ -a $1 ];then
 echo 
 else
-   echo ' file do not exists';exit
+   echo 'Error: File  does not exist';exit
 fi
 file=${1##*/}
 if [ -a /mnt/sfpkg ];then
@@ -13,7 +13,7 @@ fi
 if [ -a /usr/bin/gksudo ];then
    echo
 else
-   echo 'Depend on gksudo';exit  
+   echo 'Error: Missing gksudo';exit  
 fi
 if [ -a /mnt/sfpkg/$file ];then
 echo
