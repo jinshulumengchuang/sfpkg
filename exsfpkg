@@ -1,0 +1,29 @@
+#!/bin/bash -e
+if [ -a $1 ];then
+echo 
+else
+   echo ' file do not exists';exit
+fi
+file=${1##*/}
+if [ -a /mnt/sfpkg ];then
+   echo
+else
+   mkdir /mnt/sfpkg
+fi
+if [ -a /usr/bin/gksudo ];then
+   echo
+else
+   echo 'Depend on gksudo';exit  
+fi
+if [ -a /mnt/sfpkg/$file ];then
+echo
+else
+   mkdir /mnt/sfpkg/$file
+fi
+if [ -a /mnt/sfpkg/$file/auto.sh ];then
+echo
+else
+   gksudo mount $1 /mnt/sfpkg/$file
+fi
+sh /mnt/sfpkg/$file/auto.sh /mnt/sfpkg/$file
+exit
