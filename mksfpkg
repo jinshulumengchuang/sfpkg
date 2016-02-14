@@ -1,4 +1,4 @@
-#/bin/bash -e
+#!bin/bash -e
 if [ -a  "$1"/auto.sh ];then
    echo
 else
