@@ -7,6 +7,8 @@ http://pan.baidu.com/s/1nujd3ct
 安装
 
 cd sfpkg
+
+
 sudo sh ./install.sh
 
 您可以在个大文件管理器的“打开方式”中，设置命令“exsfpkg ％u”作sfpkg的默认打开方式，实现双击运行sf软件包
