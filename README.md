@@ -5,11 +5,14 @@ sfpkg是一种新兴的Linux软件包格式。通过sfpkg封装的应用可以�
 http://pan.baidu.com/s/1nujd3ct
 
 安装
+unzip sfpkg-master.zip
 
-cd sfpkg
 
+cd sfpkg-master
 
-sudo sh ./install.sh
+su
+
+ sh ./install.sh
 
 您可以在个大文件管理器的“打开方式”中，设置命令“exsfpkg ％u”作sfpkg的默认打开方式，实现双击运行sf软件包
 
