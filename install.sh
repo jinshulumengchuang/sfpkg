@@ -5,5 +5,5 @@ echo 'done'
 cp exsfpkg  /bin
 cp root.sh  /bin
 cp mksfpkg  /bin
-chmod 755 exsfpkg root.sh mksfpkg
+chmod 755 /bin/exsfpkg /bin/root.sh /bin/mksfpkg
 exit
