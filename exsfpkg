@@ -1,29 +1,5 @@
-#!/bin/bash -e
-if [ -a $1 ];then
-echo 
-else
-   echo 'Error: File  does not exist';exit
-fi
+#!/bin/bash 
 file=${1##*/}
-if [ -a /mnt/sfpkg ];then
-   echo
-else
-   gksudo mkdir /mnt/sfpkg
-fi
-if [ -a /usr/bin/gksudo ];then
-   echo
-else
-   echo 'Error: Missing gksudo';exit  
-fi
-if [ -a /mnt/sfpkg/$file ];then
-echo
-else
-   gksudo mkdir /mnt/sfpkg/$file
-fi
-if [ -a /mnt/sfpkg/$file/auto.sh ];then
-echo
-else
-   gksudo mount $1 /mnt/sfpkg/$file
-fi
+[ -a /mnt/sfpkg/$file/auto.sh ]  &  gksudo sh /bin/root.sh $1  
 sh /mnt/sfpkg/$file/auto.sh /mnt/sfpkg/$file
 exit
