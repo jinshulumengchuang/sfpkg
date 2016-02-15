@@ -5,6 +5,7 @@ sfpkg是一种新兴的Linux软件包格式。通过sfpkg封装的应用可以�
 http://pan.baidu.com/s/1nujd3ct
 
 安装
+
 unzip sfpkg-master.zip
 
 
