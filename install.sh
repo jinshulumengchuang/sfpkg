@@ -1,9 +1,6 @@
 #!/bin/bash
 echo "The program depends on gksudo"
 echo 'Installing......................'
+install -m755 mksfpkg exsfpkg root.sh /bin/
 echo 'done'
-cp exsfpkg  /bin
-cp root.sh  /bin
-cp mksfpkg  /bin
-chmod 755 /bin/exsfpkg /bin/root.sh /bin/mksfpkg
 exit
