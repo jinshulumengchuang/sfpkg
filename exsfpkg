@@ -1,5 +1,15 @@
-#!/bin/bash 
-file=${1##*/}
-[ -a /mnt/sfpkg/$file/auto.sh ]  &  gksudo sh /bin/root.sh $1  
-sh /mnt/sfpkg/$file/auto.sh /mnt/sfpkg/$file
+#!/bin/bash
+if [ $1 = '-h' ];then
+   echo 'exsfpkg exsfpkgfile'
+   echo '您可以去百度贴吧：sfpkg吧下载网友们制作的sfpkgs';exit
+fi
+file=$(basename "$1")
+if [ -a /mnt/sfpkg/"$file"/auto.sh ];then
+   echo 'sfpkg mounted......'
+else
+   mkdir /mnt/sfpkg
+   mkdir /mnt/sfpkg/"$file"
+   mount "$1" /mnt/sfpkg/"$file"
+fi
+sh /mnt/sfpkg/"$file"/auto.sh /mnt/sfpkg/"$file"
 exit
