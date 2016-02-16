@@ -16,7 +16,9 @@ cd sfpkg-master
 su
 
 sh ./install.sh
-如果您没有git，可以下载zip.
+
+
+如果您没有git，可以从github主页下载zip.
 
 unzip sfpkg-master.zip
 
