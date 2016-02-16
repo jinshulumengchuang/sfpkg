@@ -4,5 +4,5 @@ if [ -a  "$1"/auto.sh ];then
 else
    echo "Can't find auto.sh ";exit;
 fi
-mksquashfs  $1 $1.sfpkg -b 1M -comp xz -Xdict-size 25%
+mksquashfs  "$1" "$1".sfpkg -b 1M -comp xz -Xdict-size 25%
 exit 0
