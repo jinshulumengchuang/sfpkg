@@ -7,9 +7,7 @@ file=$(basename "$1")
 if [ -a /mnt/sfpkg/"$file"/auto.sh ];then
    echo 'sfpkg mounted......'
 else
-   mkdir /mnt/sfpkg
-   mkdir /mnt/sfpkg/"$file"
-   mount "$1" /mnt/sfpkg/"$file"
+   gksudo /bin/root.sh
 fi
 sh /mnt/sfpkg/"$file"/auto.sh /mnt/sfpkg/"$file"
 exit
