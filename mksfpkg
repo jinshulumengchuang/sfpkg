@@ -1,8 +1,7 @@
 #!/bin/bash 
 if [ -a  "$1"/auto.sh ];then
-   echo
+   mksquashfs  "$1" "$1".sfpkg -b 1M -comp xz -Xdict-size 25%
 else
-   echo "Can't find auto.sh ";exit;
+   echo "Can't find auto.sh "
 fi
-mksquashfs  "$1" "$1".sfpkg -b 1M -comp xz -Xdict-size 25%
 exit 
