@@ -8,6 +8,7 @@ http://tieba.baidu.com/f?kw=sfpkg&fr=home
 安装
 
 <code> curl https://raw.githubusercontent.com/jinshulumengchuang/sfpkg/master/install.sh | sudo bash </code>
+
 您可以在各大文件管理器的“打开方式”中，设置命令“exsfpkg ％u”作sfpkg的默认打开方式，实现双击运行sf软件包
 
 打包
