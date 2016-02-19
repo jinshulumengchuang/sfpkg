@@ -2,4 +2,5 @@
 file=$(basename "$1")
 [ -a /tmp/sfpkg/"$file"/auto.sh ] || /usr/bin/sfroot "$1"
 sh /tmp/sfpkg/"$file"/auto.sh /tmp/sfpkg/"$file"
+rm -rf /tmp/sfpkg
 exit
