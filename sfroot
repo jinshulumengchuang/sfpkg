@@ -1,2 +1,2 @@
 file=$(basename "$1")
-mkdir /mnt/sfpkg;mkdir /mnt/sfpkg/"$file";mount "$1" /mnt/sfpkg"/$file"
+mkdir /tmp/sfpkg;unsquashfs -d /tmp/sfpkg"/$file" "$1"
