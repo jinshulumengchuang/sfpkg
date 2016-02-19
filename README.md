@@ -11,9 +11,11 @@ http://tieba.baidu.com/f?kw=sfpkg&fr=home
 
 （如果您没有curl，可以先安装一个）
 
-注：exsfpkg依赖于gksudo，mksfpkg依赖于squashfs-tools
+注：exsfpkg依赖于gksudo，mksfpkg依赖于squashfs-tools (如果您没有gksudo，可以直接在root授权下执行exsfpkg，注意，这是不安全的)
 
 您可以在各大文件管理器的“打开方式”中，设置命令“exsfpkg ％u”作sfpkg的默认打开方式，实现双击运行sf软件包
+
+
 
 打包
 
