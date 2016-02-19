@@ -1,5 +1,5 @@
 #!/bin/bash
 file=$(basename "$1")
 [ -a /mnt/sfpkg/"$file"/auto.sh ] || gksudo /usr/bin/sfroot "$1"
-sh /mnt/sfpkg/"$file"/auto.sh /mnt/sfpkg/"$file"
+bash /mnt/sfpkg/"$file"/auto.sh /mnt/sfpkg/"$file"
 exit
